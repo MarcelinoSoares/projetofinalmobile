@@ -11,7 +11,7 @@ def test_setup():
     desired_cap = {
         'platformName': 'Android',
         'deviceName': 'emulator-5554',
-        "app": "/Users/Marce/OneDrive/DOCUMENTOS/ETA/ETA025-TÓPICOS ESPECIAIS I/AppResultado/resources/apk/br.jus.tse.resultados_5000105_apps.evozi.com.apk",
+        "app": "C:/Users/Marce/OneDrive/DOCUMENTOS/ETA/ETA025-TÓPICOS ESPECIAIS I/projetofinalmobile/resources/apk/br.jus.tse.resultados_5000105_apps.evozi.com.apk",
         'autoGrantPermissions': True
     }
 
