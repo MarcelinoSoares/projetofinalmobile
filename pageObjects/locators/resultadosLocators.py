@@ -12,4 +12,8 @@ class resultadosLocators(object):
     BTN_INFO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Informações\")')
     BTN_ESCOLHER_LOCAL = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Escolher local\")')
     BTN_PESQUISAR = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Pesquisar candidato\")')
+    ESCOLHER_ESTADO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Estado Selecione o estado\")')
+    ESCOLHER_MUNICIPIO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Município Selecione o município\")')
+    ESCOLHER_PE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Pernambuco\")')
+    ESCOLHER_RECIFE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Recife\")')
     BTN_CONFIRMAR = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Confirmar\")')
