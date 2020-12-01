@@ -1,5 +1,8 @@
 from appium.webdriver.common.mobileby import MobileBy
 
+"""
+Esta classe contém todos os elementos definidos para o app resultados
+"""
 
 class resultadosLocators(object):
     BTN_PROX = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Próximo\")')

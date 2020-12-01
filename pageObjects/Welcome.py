@@ -4,6 +4,11 @@ import time
 
 class Initial(Base):
 
+    """
+Este método executa o fluxo no bem vindo, no app resultados
+:retorno: tela de usuario
+    """
+
     def realizar_fluxo_inicial(self):
         btn_prox = Base.find_element(self.drive, resultadosLocators.BTN_PROX)
         btn_prox.click()
@@ -15,6 +20,11 @@ class Initial(Base):
         btn_permitir = Base.find_element(self.drive, resultadosLocators.BTN_PERMITIR)
         btn_permitir.click()
         time.sleep(20)
+
+        """
+    Este método executa o fluxo da busca por estado e municipio, no app resultados
+    :retorno: tela de usuario com imformações como todos os candidatos, numeros de votos e etc
+        """
 
     def realizar_busca_por_estado_e_município(self):
         btn_escolher_local = Base.find_element(self.drive, resultadosLocators.BTN_ESCOLHER_LOCAL)
@@ -35,6 +45,11 @@ class Initial(Base):
         btn_confimar = Base.find_element(self.drive, resultadosLocators.BTN_CONFIRMAR)
         btn_confimar.click()
         time.sleep(20)
+
+        """
+    Este método executa o fluxo de navegação no menu inferior, no app resultados
+    :retorno: cada tela de categoria
+        """
 
     def realizar_fluxo_navega_menu(self):
         btn_resultados = Base.find_element(self.drive, resultadosLocators.BTN_RESULTADOS)
