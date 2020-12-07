@@ -27,7 +27,7 @@ resultados/
 
 🗂 **Breve explicação para cada pasta:**
 
-Objetos de páginas >> PageObjects related, um arquivo .py para cada pasta e suas funcionalidades.
+Objetos de páginas >> PageObjects relacionados, um arquivo .py para cada pasta e suas funcionalidades.
 
 Recursos >> Aqui indicamos os apks a serem usados e também o número de série do dispositivo em teste na raiz do projeto (conftest.py).
 
@@ -55,7 +55,7 @@ ___
 
 💻 **Configuração do ambiente de teste**
 
-A pasta do aplicativo e o número de série do produto Android estão registrados na pasta / setup.
+A pasta do aplicativo e o número de série do produto Android estão registrados na raiz do projeto.
 Basta inserir seu número de série (dispositivos adb) em conftest.py.
 
 Depois disso, indique
