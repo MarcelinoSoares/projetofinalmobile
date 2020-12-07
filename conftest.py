@@ -1,9 +1,5 @@
 import pytest
 from selenium import webdriver
-from setup import DeviceID
-
-DeviceName = DeviceID
-
 
 @pytest.fixture(scope='class')
 def test_setup():

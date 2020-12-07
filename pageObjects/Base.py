@@ -1,5 +1,7 @@
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from pageObjects.locators.resultadosLocators import resultadosLocators
 
 class Base(object):
 
@@ -12,8 +14,15 @@ class Base(object):
         self.drive = drive
 
     def find_element(self, element):
-        wait = WebDriverWait(self, 20)
-        value = wait.until(EC.presence_of_element_located((
+        value = WebDriverWait(self, 30).until(EC.presence_of_element_located((
             element
         )))
         return value
+
+    def is_is_home_screen(self):
+        resultados = Base.find_element(self.drive, resultadosLocators.EXPRESSION_SELECIONE)
+        try:
+            resultados
+        except NoSuchElementException:
+            return False
+        return True
