@@ -1,16 +1,16 @@
 # projetofinalmobile
 
-** Projeto de automação para o aplicativo Resultados (funcionalidades) **
+**Projeto de automação para o aplicativo Resultados (funcionalidades)**
 
 Este projeto tem como objetivo automatizar alguns fluxos do apk resultados. 
 
 ___
 
-** Estrutura do projeto: **
+**Estrutura do projeto:**
 
 Estou usando a estrutura do Pytest para este projeto. Então, aqui está uma visão geral do meu projeto:
 
-`` `
+```
 resultados/
   objetos de páginas/
       localizadores /
@@ -23,9 +23,9 @@ resultados/
           Apk.File
   testes /
       testResultados.py
-`` `
+```
 
-🗂 ** Breve explicação para cada pasta: **
+🗂 **Breve explicação para cada pasta:**
 
 Objetos de páginas >> PageObjects related, um arquivo .py para cada pasta e suas funcionalidades.
 
@@ -48,12 +48,12 @@ Selênio <br>
 
 Basta executar o arquivo requirements.txt usando o seguinte comando no caminho raiz:
 
-`` `
+```
 requisitos pip install -r
-`` `
+```
 ___
 
-💻 ** Configuração do ambiente de teste **
+💻 **Configuração do ambiente de teste**
 
 A pasta do aplicativo e o número de série do produto Android estão registrados na pasta / setup.
 Basta inserir seu número de série (dispositivos adb) em conftest.py.
@@ -62,18 +62,18 @@ Depois disso, indique
 
 Para executar o projeto, basta chamar pytest no terminal:
 
-`` `
+```
 pytest
-`` `
+```
 ___
 
-📝 ** Execução de relatório **
+📝 **Execução de relatório**
 
 Para realizar a execução e também gerar um relatório para isso, basta usar o seguinte comando ao chamar o pytest:
 
-`` `
+```
 pytest --html = report.html
-`` `
+```
 
 Após a execução, um arquivo denominado "report.html" será gerado no caminho raiz do projeto. Clique nele e ele será aberto como um arquivo de texto. Execute-o indicando um navegador para renderizar o arquivo html. O relatório será exibido.
 
