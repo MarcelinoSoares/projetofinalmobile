@@ -4,12 +4,11 @@ import time
 
 class Initial(Base):
 
-    """
-Este método executa o fluxo no bem vindo, no app resultados
-:retorno: tela de usuario
-    """
-
     def realizar_fluxo_inicial(self):
+        """
+       Este método executa o fluxo no bem vindo, no app resultados
+       :retorno: tela de usuario
+        """
         btn_prox = Base.find_element(self.drive, resultadosLocators.BTN_PROX)
         btn_prox.click()
         btn_entendi = Base.find_element(self.drive, resultadosLocators.BTN_ENTENDI)
@@ -21,12 +20,11 @@ Este método executa o fluxo no bem vindo, no app resultados
         btn_permitir.click()
         time.sleep(20)
 
-        """
-    Este método executa o fluxo da busca por estado e municipio, no app resultados
-    :retorno: tela de usuario com imformações como todos os candidatos, numeros de votos e etc
-        """
-
     def realizar_busca_por_estado_e_município(self):
+        """
+        Este método executa o fluxo da busca por estado e municipio, no app resultados
+       :retorno: tela de usuario com imformações como todos os candidatos, numeros de votos e etc
+        """
         btn_escolher_local = Base.find_element(self.drive, resultadosLocators.BTN_ESCOLHER_LOCAL)
         btn_escolher_local.click()
         escolher_estado = Base.find_element(self.drive, resultadosLocators.ESCOLHER_ESTADO)
@@ -46,12 +44,13 @@ Este método executa o fluxo no bem vindo, no app resultados
         btn_confimar.click()
         time.sleep(20)
 
-        """
-    Este método executa o fluxo de navegação no menu inferior, no app resultados
-    :retorno: cada tela de categoria
-        """
+
 
     def realizar_fluxo_navega_menu(self):
+        """
+         Este método executa o fluxo de navegação no menu inferior, no app resultados
+         :retorno: cada tela de categoria
+        """
         btn_resultados = Base.find_element(self.drive, resultadosLocators.BTN_RESULTADOS)
         btn_resultados.click()
         btn_totalizacao = Base.find_element(self.drive, resultadosLocators.BTN_TOTALIZACAO)
