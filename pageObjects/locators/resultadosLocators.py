@@ -19,3 +19,42 @@ class resultadosLocators(object):
     ESCOLHER_PE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Pernambuco\")')
     ESCOLHER_RECIFE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Recife\")')
     BTN_CONFIRMAR = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Confirmar\")')
+    BTN_TURNO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"1ºTURNO\")')
+    DROP_DOWN_ELEICOES = (MobileBy.XPATH, ("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget"
+                     ".FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view"
+                     ".ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View"
+                     "/android.view.View/android.view.View/android.view.View/android.view.View/android"
+                     ".view.View/android.view.View/android.view.View/android.view.View["
+                     "2]/android.view.View[2]/android.view.View[1]"))
+    BTN_2_TURNO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"2º Turno\")')
+    HOME_TEXTO_RECIFE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Recife, PE\")')
+    CANDIDATO_TEXTO_MARILIA = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"MARILIA ARRAES\")')
+    BTN_FAVORITAR = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Favoritar\")')
+    FAVORITO_TEXTO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Favorito\")')
+    BTN_FECHAR = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Fechar\")')
+    BTN_ESCOLHE_TURNO_TOP = (MobileBy.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android"
+                                             ".widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
+                                             "/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android"
+                                             ".view.View/android.view.View/android.view.View/android.view.View/android.view"
+                                             ".View/android.view.View/android.view.View/android.view.View/android.view"
+                                             ".View[1]/android.view.View[1]/android.view.View/android.widget.Button")
+    DIALOG_1_TURNO = (MobileBy.XPATH,
+                      "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
+                      "/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit"
+                      ".WebView/android.webkit.WebView/android.view.View/android.view.View/android.app.Dialog/android"
+                      ".view.View[3]/android.view.View[2]/android.widget.RadioButton[1]")
+    BTN_CONFIRMAR_TURNO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"CONFIRMAR\")')
+    BTN_RESUL = (MobileBy.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget"
+                                 ".FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view"
+                                 ".ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android"
+                                 ".view.View/android.view.View/android.view.View/android.view.View/android.widget"
+                                 ".TabWidget/android.view.View[1]/android.view.View")
+    BTN_PESQUISAR_CANDIDATO = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Pesquisar candidato\")')
+    BARRA_BUSCA = (MobileBy.XPATH, ("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget"
+                                    ".FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view"
+                                    ".ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View"
+                                    "/android.view.View/android.view.View/android.app.Dialog/android.view.View"
+                                    "/android.view.View[1]/android.view.View[2]/android.view.View["
+                                    "2]/android.view.View/android.view.View/android.widget.EditText"))
+    RESULTADO_PESQUISA = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"DANI PORTELA\")')
+    TEXTO_SELECIONE = (MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().textContains(\"Selecione\")')

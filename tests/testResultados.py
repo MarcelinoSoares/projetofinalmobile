@@ -1,33 +1,56 @@
 import pytest
-from pageObjects.Welcome import Initial
-
+from pageObjects.paginaPrincipal import Initial
+from pageObjects.locators import resultadosLocators
+from pageObjects import resultados
 
 @pytest.mark.usefixtures("test_setup")
 class testResultados(object):
 
+
     def test_fluxo_inicial(self, test_setup):
         """
-       Este método executa o teste do fluxo no bem vindo, no app resultados
-      :p aram test_setup: Conexão entre dispositivo em teste (emulado) e Appium
-      :retorno: passe
-       """
-        initial= Initial(test_setup)
+        Esse método testa se é possível alcançar a tela inicial do app sem erros
+        :param test_setup: Conexão entre o DUT  e o Appium
+        :return: boolean
+        """
+        initial = Initial(test_setup)
         initial.realizar_fluxo_inicial()
+        is_in_home = initial.verificar_tela_home()
+        assert is_in_home, 'Não alcançou home'
 
-    def test_buscar_por_estado_e_municipio(self, test_setup):
+    def test_estado_municipio_2_turno(self, test_setup):
         """
-       Este método executa o teste do fluxo da busca por estado e municipio, no app resultados
-       :p aram test_setup: Conexão entre dispositivo em teste (emulado) e Appium
-       :retorno: fail pois já terminam as eleições
+        Esse método testa se é possível verificar o resultado da eleição do 2 turno escolhendo um estado e municipio, sem erros
+        :param test_setup: Conexão entre o DUT  e o Appium
+        :return: boolean
         """
-        initial= Initial(test_setup)
-        initial.realizar_busca_por_estado_e_município()
+        initial_resultados = Resultados(test_setup)
+        initial_resultados.buscar_2_turno()
+        initial_resultados.escolher_local()
+        initial_resultados.escolher_estado_municipio(resultadosLocators.BTN_ESTADO_PERNAMBUCO,
+                                                     resultadosLocators.BTN_MUNICIPIO_RECIFE)
+        retorna_recife_pe = initial_resultados.recife_pe_2_turno_validacao()
+        assert retorna_recife_pe, 'Resultado Errado'
 
-    def test_buscar_menu(self, test_setup):
+    def test_favorita_candidato(self, test_setup):
         """
-       Este método executa o teste do fluxo de navegação no menu inferior, no app resultados
-       :p aram test_setup: Conexão entre dispositivo em teste (emulado) e Appium
-       :retorno: passe
+        Esse método testa se ao favoritar um candidato o mesmo aparece corretamente favoritado e na tab de favoritos
+        :param test_setup: Conexão entre o DUT  e o Appium
+        :return: boolean
         """
-        initial= Initial(test_setup)
-        initial.realizar_fluxo_navega_menu()
+        initial_resultados = Resultados(test_setup)
+        initial_resultados.favoritar_candidato()
+        valida_favorito = initial_resultados.valida_favorito()
+        valida_favoritos_tab = initial_resultados.valida_favorito_tab()
+        assert (valida_favorito) and (valida_favoritos_tab), 'Candidato não foi favoritado'
+
+    def test_busca_candidato(self, test_setup):
+        """
+        Esse método testa se ao pesquisar um candidato o mesmo aparece no resultado da busca
+        :param test_setup: Conexão entre o DUT e o Appium
+        :return: boolean
+        """
+        initial_resultados = Resultados(test_setup)
+        initial_resultados.busca_1_turno()
+        valida_busca = initial_resultados.valida_busca()
+        assert valida_busca, 'Candidato não foi encontrado'

@@ -6,21 +6,25 @@ from pageObjects.locators.resultadosLocators import resultadosLocators
 class Base(object):
 
     def __init__(self, drive):
-        """
-         Este método é responsável por encontrar elementos (com presence_of_element_located condição)
-         :p ou elemento: elemento a ser pesquisado
-        :retorno: valor do elemento
-        """
         self.drive = drive
 
-    def find_element(self, element):
-        value = WebDriverWait(self, 30).until(EC.presence_of_element_located((
-            element
+    def encontrar_elemento(self, elemento):
+        """
+        Esse método é responsável por encontrar elementos (utilizando presence_of_element_located)
+        :param elemento: elementO a ser procurado
+        :return: valor do elemento
+        """
+        valor = WebDriverWait(self, 40).until(EC.presence_of_element_located((
+            elemento
         )))
-        return value
+        return valor
 
-    def is_is_home_screen(self):
-        resultados = Base.find_element(self.drive, resultadosLocators.EXPRESSION_SELECIONE)
+    def verificar_tela_home(self):
+        """
+        Esse método é responsável por validar se está na página principal
+        :return: valor do elemento
+        """
+        resultados = Base.encontrar_elemento(self.drive, resultadosLocators.TEXTO_SELECIONE)
         try:
             resultados
         except NoSuchElementException:
