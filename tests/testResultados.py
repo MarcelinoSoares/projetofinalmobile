@@ -6,7 +6,6 @@ from pageObjects import resultados
 @pytest.mark.usefixtures("test_setup")
 class testResultados(object):
 
-
     def test_fluxo_inicial(self, test_setup):
         """
         Esse método testa se é possível alcançar a tela inicial do app sem erros
@@ -27,8 +26,8 @@ class testResultados(object):
         initial_resultados = Resultados(test_setup)
         initial_resultados.buscar_2_turno()
         initial_resultados.escolher_local()
-        initial_resultados.escolher_estado_municipio(resultadosLocators.BTN_ESTADO_PERNAMBUCO,
-                                                     resultadosLocators.BTN_MUNICIPIO_RECIFE)
+        initial_resultados.escolher_estado_municipio(resultadosLocators.ESCOLHER_PE,
+                                                     resultadosLocators.ESCOLHER_RECIFE)
         retorna_recife_pe = initial_resultados.recife_pe_2_turno_validacao()
         assert retorna_recife_pe, 'Resultado Errado'
 
