@@ -16,8 +16,8 @@ resultados/
       localizadores /
           resultadoslocators.py
       base.py
-      home.py
-      welcome.py
+      paginaPrincipal.py
+      resultados.py
   recursos/
       apk/
           Apk.File
