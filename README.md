@@ -49,7 +49,7 @@ Selênio <br>
 Basta executar o arquivo requirements.txt usando o seguinte comando no caminho raiz:
 
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 ___
 
