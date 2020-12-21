@@ -3,7 +3,8 @@
 **Projeto de automação para o aplicativo Resultados (funcionalidades)**
 
 Este projeto tem como objetivo automatizar alguns fluxos do apk resultados. 
-
+Realizado por:
+Alan Garcia, Danilo Ferreira, Ewertton Oliveira e Marcelino Soares.
 ___
 
 **Estrutura do projeto:**
@@ -41,7 +42,7 @@ ___
 Python <br>
 Pytest <br>
 Appium-Python-Client <br>
-Selênio <br>
+Selênium <br>
 (e alguns complementos) <br>
 
 🛠 Como instalar?
