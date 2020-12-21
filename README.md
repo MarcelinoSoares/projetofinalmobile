@@ -3,7 +3,9 @@
 **Projeto de automação para o aplicativo Resultados (funcionalidades)**
 
 Este projeto tem como objetivo automatizar alguns fluxos do apk resultados. 
+
 Realizado por:
+
 Alan Garcia, Danilo Ferreira, Ewertton Oliveira e Marcelino Soares.
 ___
 
