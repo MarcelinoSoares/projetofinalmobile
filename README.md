@@ -17,9 +17,10 @@ Estou usando a estrutura do Pytest para este projeto. Então, aqui está uma vis
 resultados/
   objetos de páginas/
       localizadores /
-          resultadoslocators.py
+       pagina_principal_seletor.py
+          resultados_seletores.py
       base.py
-      paginaPrincipal.py
+      pagina_principal.py
       resultados.py
   recursos/
       apk/
