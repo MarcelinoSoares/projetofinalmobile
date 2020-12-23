@@ -1,7 +1,7 @@
 import pytest
 from pageObjects.pagina_principal import Initial
-from pageObjects.locators import resultadosLocators
-from pageObjects import resultados
+from pageObjects.locators.resultados_seletores import ResultadosSeletores
+from pageObjects.resultados import Resultados
 
 @pytest.mark.usefixtures('test_setup')
 class TestResultados(object):
