@@ -1,10 +1,9 @@
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from pageObjects.locators.resultadosLocators import resultadosLocators
+from selenium.webdriver.support import expected_conditions as EC
+from pageObjects.locators.pagina_principal_seletor import PrincipalSeletores
 
 class Base(object):
-
     def __init__(self, drive):
         self.drive = drive
 
@@ -24,7 +23,7 @@ class Base(object):
         Esse método é responsável por validar se está na página principal
         :return: valor do elemento
         """
-        resultados = Base.encontrar_elemento(self.drive, resultadosLocators.TEXTO_SELECIONE)
+        resultados = Base.encontrar_elemento(self.drive, PrincipalSeletores.TEXTO_SELECIONE)
         try:
             resultados
         except NoSuchElementException:
