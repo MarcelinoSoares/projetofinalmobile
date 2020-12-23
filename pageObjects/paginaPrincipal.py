@@ -1,4 +1,4 @@
-from pageObjects import Base
+from pageObjects.Base import Base
 from pageObjects.locators.resultadosLocators import *
 import time
 

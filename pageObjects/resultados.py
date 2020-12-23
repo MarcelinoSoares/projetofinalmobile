@@ -1,4 +1,4 @@
-from pageObjects import Base
+from pageObjects.Base import Base
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from pageObjects.locators import resultadosLocators
