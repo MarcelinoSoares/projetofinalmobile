@@ -25,7 +25,7 @@ resultados/
       apk/
           Apk.File
   testes /
-      testResultados.py
+      test_Resultados.py
 ```
 
 🗂 **Breve explicação para cada pasta:**
